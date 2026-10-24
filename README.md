@@ -1,3 +1,8 @@
+
+## Student Information
+- Name: Rana Saied Ismael
+- Student ID: 231006205
+
 # Custom MapReduce Engine (Bonus Assignment)
 
 ## Overview
