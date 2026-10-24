@@ -1,7 +1,18 @@
-# Big-Data-Analytics-
+# Custom MapReduce Engine (Bonus Assignment)
 
-## Student Instructions
+## Overview
+A lightweight MapReduce engine implemented in Python from scratch (no Hadoop, no Spark) satisfying all assignment requirements:
+1. **Parallel Mapping:** Uses `ThreadPoolExecutor` to process multiple input splits concurrently.
+2. **Map Phase:** Emits `(word, 1)` pairs.
+3. **Combiner:** Computes local subtotals for each split.
+4. **Partitioner:** Routes keys to 2 reducers using `abs(hash(key)) % 2`.
+5. **Shuffle & Sort:** Groups and sorts keys per reducer.
+6. **Reduce Phase:** Computes the final word counts and writes one output file per reducer.
 
-1. Fork this repository to your GitHub account.
-2. Complete each programming task in its own folder in your fork, and push your work there.
-3. Add your name and student ID to this README in your fork.
+---
+
+## How to Run
+1. Place text splits inside `input_splits/` (at least 2 files).
+2. Run the script:
+   ```bash
+   python mapreduce.py

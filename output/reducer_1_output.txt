@@ -1,0 +1,5 @@
+car	3
+fire	1
+roof	1
+theft	1
+water	3
